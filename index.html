@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="p3"><b> ¡¡Estamos jugando al Cachipún!! 🪨 📄 ✂️ </b></h1>
+<h3 class="p3"> <i>¿Cómo te fue 👀👀?</i></h3>
+	<hr class="p3">
+
+	<script>
+
+function jugar(eleccionPersona) {
+  // Agregando Piedra Papel o tijera
+  let opciones = ["piedra", "papel", "tijera"];
+
+  // Elección aleatoria del computador
+  let eleccionComputador = opciones[Math.floor(Math.random() * opciones.length)];
+
+  // ¿Qué pasa si el Persona empata, pierde o gana?
+  if (eleccionPersona === eleccionComputador) {
+    // Empate
+    document.write("Empate. Ambos eligieron " + eleccionPersona + ".");
+  } else if (
+    (eleccionPersona === "piedra" && eleccionComputador === "tijera") ||
+    (eleccionPersona === "papel" && eleccionComputador === "piedra") ||
+    (eleccionPersona === "tijera" && eleccionComputador === "papel")
+  ) {
+    // La Persona gana
+    document.write("¡Felicitaciones, ganaste!. Tú elegiste " + eleccionPersona + " y el computador eligió " + eleccionComputador + ".");
+  } else {
+    // La Persona pierde
+    document.write("¡Que mal, perdiste!. Tú elegiste " + eleccionPersona + " y el computador  eligió " + eleccionComputador + ".");
+  }
+}
+
+// Elección de la Persona.
+let eleccionPersona = prompt("Elige: piedra, papel o tijera").toLowerCase();
+
+// Verificar si la elección de la Persona es válida para jugar.
+if (eleccionPersona === "piedra" || eleccionPersona === "papel" || eleccionPersona === "tijera") {
+  jugar(eleccionPersona);
+} else {
+  document.write(" Por favor, elige solo piedra, papel o tijeras.");
+}
+	</script>
+
+</body>
+</html>
+
+
