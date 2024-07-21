@@ -1,0 +1,1 @@
+#Todo esta explicado en el mismo proyecto, pero es simple primero agregué las opciones de piedra papel y tijera, luego agregué el math.floor math random para la elección aleatoria del computador, luego le agregé lo que tenía que decir si empataba, ganaba o perdía la persona que estaba jugando y por ultimo un tipo de default en caso de error de palabra. 
